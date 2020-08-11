@@ -1,0 +1,28 @@
+body{
+	background-color: powderblue;
+}
+.signup-button{
+  padding-left: 600px;
+  padding-top: 300px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li a{
+	background-color: green;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+}
+a:hover{
+	color: snow;
+}
+table,td{
+	border:1px solid black;
+}
+td{
+	border:1px solid black;
+	padding: 10px;
+}

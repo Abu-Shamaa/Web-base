@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment_02</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="myform.js"></script>
+	<style type="text/css">
+body{
+	background-color: powderblue;
+}
+/* Style the container for inputs */
+.container {
+  background-color: powderblue;
+  padding-left: 450px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+/* The message box is shown when the user clicks on the password field */
+#NameMessage {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#NameMessage p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+#emailhigh {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#emailhigh p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+table, td{
+	padding: 10px;
+	border:1px solid black;
+}
+</style>
+
+</head>
+<body>
+	<section class="container">
+		<form id="supform" class="supform" onsubmit="myFunction()" action="showFormData.php" 
+		method="POST">
+			<table>
+				<tr>
+					<th><legend>Personal Information</legend></th>
+				</tr>
+				<tr>
+					<td>First Name</td>
+					<td><input type="text" id="first_name" name="first_name" required="required"></td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td><input type="text" id= "last_name" name="last_name" required="required"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="email" id="email" name="email" required="required"></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" id="psw" name="psw" required="required"></td>
+				</tr>
+				<tr>
+					<td>Confirm Password</td>
+					<td><input type="password" id="confirm_pssword" name="confirm_pssword" required="required"></td>
+				</tr>
+				<tr>
+					<td>Gender</td>
+					<td>
+						<input type="radio" name="gender" value="male" required="required"> Male 
+						<input type="radio" name="gender" value="female" required="required"> Female
+					</td>
+				</tr>
+				<tr>
+					<td>State</td>
+					<td>
+						<select name="state" required="required">
+							    <option value="">select...</option>
+							    <option value="sabah">Sabah</option>
+							    <option value="selangor">Selangor</option>
+							    <option value="sarawak">Sarawak</option>
+							    <option value="terengganu">Terengganu</option>
+							</select>
+						</td>
+				</tr>
+
+			</table>
+			<br>
+			<textarea rows="3" cols="50" name="comment" form="usrform">TERMS AND CONDITION</textarea><br>
+				<input type="checkbox" name="accept" value="Yes" required="required"> 
+				I accept the above Terms and Condition<br>
+	 			<button type="submit" name="submit" value="Register">Register</button>&nbsp<button type="reset" value="Clear">Clear</button><br>
+	 			<a href="signup.html" >Back to main page </a>
+		</form>
+	</section>
+	<div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="specilas" class="invalid">A <b>special</b> charecter</p>
+  <p id="length" class="invalid">Minimum <b>6 characters</b></p>
+   </div>
+   <div id="NameMessage">
+  <h3>Password must contain the following:</h3>
+  <p id="nameletter" class="invalid"><b>Only</b> letter</p>
+   </div>
+   <div id="emailhigh">
+  <h3>Password must contain the following:</h3>
+  <p id="emailSample" class="invalid"><b>abu@gmail.com</b></p>
+   </div>
+   <script src="myform.js"></script>
+</body>
+</html>
